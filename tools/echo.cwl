@@ -3,7 +3,7 @@ class: CommandLineTool
 baseCommand: echo
 
 inputs:
-  message_text:
+  message:
     type: string
     inputBinding:
       position: 1
