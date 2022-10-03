@@ -35,7 +35,7 @@ inputs:
       position: 2
   
 outputs:
-  report:
+  trimmed_reads:
     type: stdout
   
   trimmed_reads:

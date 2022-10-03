@@ -19,7 +19,7 @@ arguments:
 #     inputBinding: 
 #       prefix: --adapter
 #       position: 1
-  
+
 stdout: report.txt
 
 outputs:
