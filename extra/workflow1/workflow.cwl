@@ -1,6 +1,7 @@
 
-cwlVersion: v1.0
 class: Workflow
+cwlVersion: v1.2
+
 requirements:
   ScatterFeatureRequirement: {}
 
@@ -9,14 +10,14 @@ inputs:
 
 steps:
   echo:
-    run: echo.cwl
+    run: ./echo.cwl
     scatter: message
     in:
       message: message_array
     out: [echo_out]
     
   wordcount:
-    run: wc.cwl
+    run: ./wc.cwl
     scatter: input_file
     in:
       input_file: echo/echo_out

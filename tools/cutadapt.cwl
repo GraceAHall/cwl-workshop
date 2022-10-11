@@ -1,20 +1,15 @@
-cwlVersion: v1.2
 class: CommandLineTool
+cwlVersion: v1.2
 
 baseCommand: cutadapt
+stdout: report.txt
 
 inputs:
   reads:
     type: File
     inputBinding:
-      position: 999
-
-  adapter:
-    type: string
-    inputBinding: 
-      prefix: --adapter
-      position: 1
-
+      position: 3
+  
   minimum_length:
     type: int?
     inputBinding:
@@ -23,25 +18,28 @@ inputs:
 
   quality_cutoff:
     type: int?
+    default: 30
     inputBinding:
       prefix: --quality-cutoff
       position: 1
-  
-  outfile:
-    type: string?
-    default: "out.fastq"
+
+  trim_n:
+    type: boolean?
     inputBinding:
-      prefix: --output
-      position: 2
-  
+      prefix: --trim-n
+      position: 1
+
+arguments:
+  - prefix: --output
+    valueFrom: out.fastq
+    position: 2
+
 outputs:
-  trimmed_reads:
-    type: stdout
+  report: 
+    type: stdout 
   
-  trimmed_reads:
+  trimmed_reads:   
     type: File
     outputBinding:
-      glob: "out.fastq"
-
-  
+      glob: out.fastq
 
