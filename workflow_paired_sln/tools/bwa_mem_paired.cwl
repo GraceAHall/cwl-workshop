@@ -5,10 +5,15 @@ baseCommand: [bwa, mem]
 stdout: output.bam
 
 inputs:
-  reads:
+  read1:
     type: File
     inputBinding:
       position: 2
+  
+  read2:
+    type: File
+    inputBinding:
+      position: 3
 
   ref:
     type: File

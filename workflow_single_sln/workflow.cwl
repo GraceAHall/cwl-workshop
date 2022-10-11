@@ -2,8 +2,6 @@ class: Workflow
 cwlVersion: v1.2
 
 inputs:
-#   read_qual_cutoff: int
-#   read_min_length: int
   raw_reads: File
   reference:
     type: File
@@ -15,11 +13,6 @@ inputs:
       - .sa
 
 outputs: 
-  sorted_bam:
-    type: File
-    outputSource:
-      - samtools_index/sorted_indexed_bam
-  
   variants:
     type: File
     outputSource:
@@ -30,8 +23,6 @@ steps:
     run: tools/cutadapt.cwl
     in:
       reads: raw_reads
-    #   quality_cutoff: read_qual_cutoff
-    #   minimum_length: read_min_length
     out: [trimmed_reads]
 
   bwa_mem:

@@ -1,0 +1,19 @@
+This is cutadapt 4.1 with Python 3.10.2
+Command line parameters: --output mutant_R1.fastq.trimmed.fastq --paired-output mutant_R2.fastq.trimmed.fastq --quality-cutoff 30 /tmp/a68061im/stgcfbf5428-a431-4562-aaca-9166611fb4c7/mutant_R1.fastq /tmp/a68061im/stgb38f2744-41cb-4bb0-90dc-0f39ebbf0547/mutant_R2.fastq
+Processing paired-end reads on 1 core ...
+Finished in 0.06 s (5 µs/read; 13.04 M reads/minute).
+
+=== Summary ===
+
+Total read pairs processed:             12,480
+Pairs written (passing filters):        12,480 (100.0%)
+
+Total basepairs processed:     3,744,000 bp
+  Read 1:     1,872,000 bp
+  Read 2:     1,872,000 bp
+Quality-trimmed:                   9,049 bp (0.2%)
+  Read 1:         1,445 bp
+  Read 2:         7,604 bp
+Total written (filtered):      3,734,951 bp (99.8%)
+  Read 1:     1,870,555 bp
+  Read 2:     1,864,396 bp

@@ -5,7 +5,12 @@ baseCommand: cutadapt
 stdout: report.txt
 
 inputs:
-  reads:
+  read1:
+    type: File
+    inputBinding:
+      position: 2
+      
+  read2:
     type: File
     inputBinding:
       position: 3
@@ -31,15 +36,23 @@ inputs:
 
 arguments:
   - prefix: --output
-    valueFrom: out.fastq
-    position: 2
+    valueFrom: $(inputs.read1.basename).trimmed$(inputs.read1.nameext)
+    position: 1
+  - prefix: --paired-output
+    valueFrom: $(inputs.read2.basename).trimmed$(inputs.read2.nameext)
+    position: 1
 
 outputs:
   report: 
     type: stdout 
   
-  trimmed_reads:   
+  read1_trimmed:   
     type: File
     outputBinding:
-      glob: out.fastq
+      glob: $(inputs.read1.basename).trimmed$(inputs.read1.nameext)
+  
+  read2_trimmed:   
+    type: File
+    outputBinding:
+      glob: $(inputs.read2.basename).trimmed$(inputs.read2.nameext)
 

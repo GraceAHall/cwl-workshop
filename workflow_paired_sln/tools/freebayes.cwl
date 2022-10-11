@@ -15,7 +15,6 @@ inputs:
     inputBinding:
       position: 1
       prefix: '--fasta-reference'
-  
 
 outputs:
   vcf:

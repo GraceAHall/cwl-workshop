@@ -1,9 +1,0 @@
-# read_qual_cutoff: 32
-# read_min_length: 140
-raw_reads:
-  class: File
-  path: data/mutant_R1.fastq
-
-reference:
-  class: File
-  path: data/wildtype.fna

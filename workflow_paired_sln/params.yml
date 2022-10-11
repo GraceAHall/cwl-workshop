@@ -1,6 +1,10 @@
-raw_reads:
+fwd_reads:
   class: File
   path: ../data/mutant_R1.fastq
+
+rev_reads:
+  class: File
+  path: ../data/mutant_R2.fastq
 
 reference:
   class: File
