@@ -16,7 +16,7 @@ steps:
   wc:
     run: ./wc.cwl
     in:
-      infile: echo/phrase
+      infile: echo/phrase            # 'phrase' output from echo step feeds 'infile'
     out: [count]
 
 outputs: []

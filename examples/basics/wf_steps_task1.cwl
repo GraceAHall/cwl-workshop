@@ -10,7 +10,7 @@ steps:
   echo:
     run: ./echo.cwl
     in:
-      message: greeting
+      message: greeting            # 'greeting' workflow input feeds 'message' tool input
     out: [phrase]
 
 outputs: []
