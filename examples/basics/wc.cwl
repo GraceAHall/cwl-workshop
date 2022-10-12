@@ -1,15 +1,15 @@
 cwlVersion: v1.2
 class: CommandLineTool
 
-baseCommand: echo
-stdout: phrase.txt
+baseCommand: wc
+stdout: wc.txt
 
 inputs:
-  message:
-    type: string
+  infile:
+    type: File
     inputBinding:
       position: 1
 
 outputs:
-  phrase:
-    type: stdout
+  count: 
+    type: stdout 

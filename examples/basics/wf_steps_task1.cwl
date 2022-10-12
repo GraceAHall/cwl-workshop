@@ -3,13 +3,14 @@ class: Workflow
 cwlVersion: v1.2
 
 inputs:
-  in1: string
+  greeting: string
+  farewell: string
 
 steps:
   echo:
     run: ./echo.cwl
     in:
-      message: in1
+      message: greeting
     out: [phrase]
 
 outputs: []
