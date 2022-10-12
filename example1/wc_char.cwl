@@ -1,13 +1,16 @@
-cwlVersion: v1.0
+cwlVersion: v1.2
 class: CommandLineTool
+
 baseCommand: wc
 
 inputs:
-  input_file:
+  infile:
     type: File
     inputBinding:
       position: 1
 
 arguments: ["-c"]
 
-outputs: []
+outputs:
+  count: 
+    type: stdout 
