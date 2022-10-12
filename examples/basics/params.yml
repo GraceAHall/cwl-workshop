@@ -1,2 +1,6 @@
 greeting: "hello there! nice to meet you"
+my_int: 45
 
+my_file:
+  class: File
+  path: ../../data/mutant_R1.fastq
