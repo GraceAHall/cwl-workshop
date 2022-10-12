@@ -1,6 +1,6 @@
 
 # target command line:
-# `freebayes --fasta-reference <ref> <bambai>
+# `freebayes --fasta-reference <ref> <bambai>`
 
 class: CommandLineTool
 cwlVersion: v1.2
