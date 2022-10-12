@@ -1,4 +1,4 @@
-raw_reads:
+reads:
   class: File
   path: ../data/mutant_R1.fastq
 
