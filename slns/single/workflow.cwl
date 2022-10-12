@@ -2,8 +2,7 @@ class: Workflow
 cwlVersion: v1.2
 
 inputs:
-  fwd_reads: File
-  rev_reads: File
+  raw_reads: File
   reference:
     type: File
     secondaryFiles:
@@ -17,21 +16,19 @@ outputs:
   variants:
     type: File
     outputSource:
-      - freebayes/vcf
+      - freebayes/variants
  
 steps:
   cutadapt:
-    run: tools/cutadapt_paired.cwl
+    run: tools/cutadapt.cwl
     in:
-      read1: fwd_reads
-      read2: rev_reads
-    out: [read1_trimmed, read2_trimmed]
+      reads: raw_reads
+    out: [trimmed_reads]
 
   bwa_mem:
-    run: tools/bwa_mem_paired.cwl
+    run: tools/bwa_mem.cwl
     in:
-      read1: cutadapt/read1_trimmed
-      read2: cutadapt/read2_trimmed
+      reads: cutadapt/trimmed_reads
       ref: reference
     out: [bam]
 
@@ -52,4 +49,4 @@ steps:
     in:
       bambai: samtools_index/sorted_indexed_bam
       ref: reference
-    out: [vcf] 
+    out: [variants] 

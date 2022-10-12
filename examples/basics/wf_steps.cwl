@@ -10,9 +10,6 @@ steps:
     run: ./echo.cwl
     in:
       message: in1
-    out: [echo_out]
-
-outputs:
-  out1:
-    type: File
-    outputSource: echo/echo_out
+    out: [phrase]
+    
+outputs: []

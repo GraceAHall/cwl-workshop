@@ -1,0 +1,6 @@
+#my_string: 'hello!'
+my_int: 22
+
+my_file:
+  class: File
+  path: ../data/mutant_R1.fastq

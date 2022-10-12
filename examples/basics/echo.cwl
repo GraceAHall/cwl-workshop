@@ -10,5 +10,5 @@ inputs:
       position: 1
 
 outputs:
-  echo_out:
+  phrase:
     type: stdout
