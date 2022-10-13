@@ -1,11 +1,11 @@
 fwd_reads:
   class: File
-  path: ../data/mutant_R1.fastq
+  path: ../../data/mutant_R1.fastq
 
 rev_reads:
   class: File
-  path: ../data/mutant_R2.fastq
+  path: ../../data/mutant_R2.fastq
 
 reference:
   class: File
-  path: ../data/wildtype.fna
+  path: ../../data/wildtype.fna

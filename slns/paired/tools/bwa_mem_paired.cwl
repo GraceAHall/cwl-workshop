@@ -2,7 +2,7 @@ class: CommandLineTool
 cwlVersion: v1.2
 
 baseCommand: [bwa, mem]
-stdout: output.bam
+stdout: aln.sam
 
 inputs:
   read1:
@@ -27,5 +27,5 @@ inputs:
       position: 1
 
 outputs:
-  bam:
+  sam:
     type: stdout

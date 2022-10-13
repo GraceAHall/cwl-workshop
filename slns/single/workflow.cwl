@@ -13,6 +13,21 @@ inputs:
       - .sa
 
 outputs: 
+  read_qc_report:
+    type: File
+    outputSource:
+      - cutadapt/report
+  
+  aln:
+    type: File
+    outputSource:
+      - bwa_mem/sam
+  
+  sorted_indexed_aln:
+    type: File
+    outputSource:
+      - samtools_index/sorted_indexed_bam
+  
   variants:
     type: File
     outputSource:
@@ -23,19 +38,19 @@ steps:
     run: tools/cutadapt.cwl
     in:
       reads: raw_reads
-    out: [trimmed_reads]
+    out: [trimmed_reads, report]
 
   bwa_mem:
     run: tools/bwa_mem.cwl
     in:
       reads: cutadapt/trimmed_reads
       ref: reference
-    out: [bam]
+    out: [sam]
 
   samtools_sort:
     run: tools/samtools_sort.cwl
     in:
-      bam: bwa_mem/bam
+      sam: bwa_mem/sam
     out: [sorted_bam]
 
   samtools_index:

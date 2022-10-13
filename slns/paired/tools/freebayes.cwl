@@ -2,7 +2,7 @@ class: CommandLineTool
 cwlVersion: v1.2
 
 baseCommand: freebayes
-stdout: output.vcf
+stdout: variants.vcf
 
 inputs:
   bambai:
@@ -15,6 +15,7 @@ inputs:
     inputBinding:
       position: 1
       prefix: '--fasta-reference'
+  
 
 outputs:
   variants:

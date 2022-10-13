@@ -2,10 +2,10 @@ class: CommandLineTool
 cwlVersion: v1.2
 
 baseCommand: [samtools, sort]
-stdout: sorted.bam
+stdout: aln.bam
 
 inputs:
-  bam:
+  sam:
     type: File
     inputBinding:
       position: 1

@@ -2,7 +2,7 @@ class: CommandLineTool
 cwlVersion: v1.2
 
 baseCommand: cutadapt
-stdout: report.txt
+stdout: cutadapt.txt
 
 inputs:
   reads:
