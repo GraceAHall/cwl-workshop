@@ -8,7 +8,7 @@ cwlVersion: v1.2
 baseCommand: # fill in 
 
 inputs:
-  bam:
+  sorted_bam:
     # fill in 
 
 outputs:

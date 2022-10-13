@@ -1,19 +1,15 @@
-
-# target command line:
-# `bwa mem <bwa_index> <reads>`
-
 class: CommandLineTool
 cwlVersion: v1.2
 
-baseCommand: # fill in
+baseCommand: []
 
 inputs:
   reads:
     # fill in
 
-  bwa_index:
+  ref:
     # fill in
 
 outputs:
-  bam:
+  sam:
     # fill in
