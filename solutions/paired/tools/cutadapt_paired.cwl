@@ -29,10 +29,10 @@ inputs:
 
 arguments:
   - prefix: --output
-    valueFrom: $(inputs.read1.basename).trimmed$(inputs.read1.nameext)
+    valueFrom: $(inputs.read1.nameroot).trimmed$(inputs.read1.nameext)
     position: 1
   - prefix: --paired-output
-    valueFrom: $(inputs.read2.basename).trimmed$(inputs.read2.nameext)
+    valueFrom: $(inputs.read2.nameroot).trimmed$(inputs.read2.nameext)
     position: 1
 
 outputs:
@@ -42,10 +42,10 @@ outputs:
   read1_trimmed:   
     type: File
     outputBinding:
-      glob: $(inputs.read1.basename).trimmed$(inputs.read1.nameext)
+      glob: $(inputs.read1.nameroot).trimmed$(inputs.read1.nameext)
   
   read2_trimmed:   
     type: File
     outputBinding:
-      glob: $(inputs.read2.basename).trimmed$(inputs.read2.nameext)
+      glob: $(inputs.read2.nameroot).trimmed$(inputs.read2.nameext)
 
