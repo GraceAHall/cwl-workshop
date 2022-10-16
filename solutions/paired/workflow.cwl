@@ -2,8 +2,8 @@ class: Workflow
 cwlVersion: v1.2
 
 inputs:
-  reads1: File
-  reads2: File
+  read1: File
+  read2: File
   reference:
     type: File
     secondaryFiles:
@@ -33,8 +33,8 @@ steps:
   cutadapt:
     run: tools/cutadapt_paired.cwl
     in:
-      read1: reads1
-      read2: reads1
+      read1: read1
+      read2: read2
     out: [read1_trimmed, read2_trimmed, report]
 
   bwa_mem:
