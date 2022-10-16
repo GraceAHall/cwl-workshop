@@ -13,7 +13,7 @@ inputs:
       - .sa
 
 outputs: 
-  read_qc_report:
+  read_qc:
     type: File
     outputSource:
       - cutadapt/report
@@ -22,12 +22,7 @@ outputs:
     type: File
     outputSource:
       - bwa_mem/sam
-  
-  sorted_indexed_aln:
-    type: File
-    outputSource:
-      - samtools_index/sorted_indexed_bam
-  
+ 
   variants:
     type: File
     outputSource:
@@ -53,15 +48,9 @@ steps:
       sam: bwa_mem/sam
     out: [sorted_bam]
 
-  samtools_index:
-    run: tools/samtools_index.cwl
-    in:
-      bam: samtools_sort/sorted_bam
-    out: [sorted_indexed_bam]
-
   freebayes:
     run: tools/freebayes.cwl
     in:
-      bambai: samtools_index/sorted_indexed_bam
+      bambai: samtools_sort/sorted_bam
       ref: reference
     out: [variants] 
