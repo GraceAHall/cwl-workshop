@@ -12,6 +12,6 @@ inputs:
     # fill in 
 
 outputs:
-  sorted_alignments:
+  sorted_bam:
     # fill in
 

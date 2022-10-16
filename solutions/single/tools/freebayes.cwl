@@ -18,5 +18,5 @@ inputs:
   
 
 outputs:
-  variants:
+  vcf:
     type: stdout

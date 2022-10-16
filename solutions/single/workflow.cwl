@@ -26,7 +26,7 @@ outputs:
   variants:
     type: File
     outputSource:
-      - freebayes/variants
+      - freebayes/vcf
  
 steps:
   cutadapt:
@@ -53,4 +53,4 @@ steps:
     in:
       bam: samtools_sort/sorted_bam
       reference: reference
-    out: [variants] 
+    out: [vcf] 
