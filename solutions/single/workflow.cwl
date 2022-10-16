@@ -44,7 +44,7 @@ steps:
     run: tools/bwa_mem.cwl
     in:
       reads: cutadapt/trimmed_reads
-      ref: reference
+      reference: reference
     out: [sam]
 
   samtools_sort:

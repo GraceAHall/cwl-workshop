@@ -10,7 +10,7 @@ inputs:
     inputBinding:
       position: 2
 
-  ref:
+  reference:
     type: File
     secondaryFiles:
       - .amb

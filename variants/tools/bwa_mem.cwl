@@ -7,7 +7,7 @@ inputs:
   reads:
     # fill in
 
-  ref:
+  reference:
     # fill in
 
 outputs:

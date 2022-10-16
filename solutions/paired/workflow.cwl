@@ -47,7 +47,7 @@ steps:
     in:
       read1: cutadapt/read1_trimmed
       read2: cutadapt/read2_trimmed
-      ref: reference
+      reference: reference
     out: [sam]
 
   samtools_sort:
