@@ -18,15 +18,8 @@ inputs:
 
   quality_cutoff:
     type: int?
-    default: 30
     inputBinding:
       prefix: --quality-cutoff
-      position: 1
-
-  trim_n:
-    type: boolean?
-    inputBinding:
-      prefix: --trim-n
       position: 1
 
 arguments:

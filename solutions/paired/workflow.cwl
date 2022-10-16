@@ -19,15 +19,10 @@ outputs:
     outputSource:
       - cutadapt/report
   
-  aln:
+  alignments:
     type: File
     outputSource:
       - bwa_mem/sam
-  
-#   sorted_indexed_aln:
-#     type: File
-#     outputSource:
-#       - samtools_index/sorted_indexed_bam
   
   variants:
     type: File
@@ -53,18 +48,12 @@ steps:
   samtools_sort:
     run: tools/samtools_sort.cwl
     in:
-      sam: bwa_mem/sam
+      alignments: bwa_mem/sam
     out: [sorted_bam]
-
-#   samtools_index:
-#     run: tools/samtools_index.cwl
-#     in:
-#       bam: samtools_sort/sorted_bam
-#     out: [sorted_indexed_bam]
 
   freebayes:
     run: tools/freebayes.cwl
     in:
-      bambai: samtools_sort/sorted_bam
-      ref: reference
+      bam: samtools_sort/sorted_bam
+      reference: reference
     out: [variants] 

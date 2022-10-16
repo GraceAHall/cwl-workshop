@@ -8,10 +8,10 @@ cwlVersion: v1.2
 baseCommand: # fill in
 
 inputs:
-  bambai:
+  bam:
     # fill in
   
-  ref:
+  reference:
     # fill in 
 
 outputs:

@@ -5,12 +5,12 @@ baseCommand: freebayes
 stdout: variants.vcf
 
 inputs:
-  bambai:
+  bam:
     type: File
     inputBinding:
       position: 2
   
-  ref:
+  reference:
     type: File
     inputBinding:
       position: 1

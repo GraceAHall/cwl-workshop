@@ -8,10 +8,10 @@ cwlVersion: v1.2
 baseCommand: # fill in 
 
 inputs:
-  sam:
+  alignments:
     # fill in 
 
 outputs:
-  sorted_bam:
+  sorted_alignments:
     # fill in
 

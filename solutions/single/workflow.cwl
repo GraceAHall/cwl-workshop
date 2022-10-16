@@ -18,7 +18,7 @@ outputs:
     outputSource:
       - cutadapt/report
   
-  aln:
+  alignments:
     type: File
     outputSource:
       - bwa_mem/sam
@@ -45,12 +45,12 @@ steps:
   samtools_sort:
     run: tools/samtools_sort.cwl
     in:
-      sam: bwa_mem/sam
+      alignments: bwa_mem/sam
     out: [sorted_bam]
 
   freebayes:
     run: tools/freebayes.cwl
     in:
-      bambai: samtools_sort/sorted_bam
-      ref: reference
+      bam: samtools_sort/sorted_bam
+      reference: reference
     out: [variants] 

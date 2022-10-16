@@ -5,7 +5,7 @@ baseCommand: [samtools, sort]
 stdout: aln.bam
 
 inputs:
-  sam:
+  alignments:
     type: File
     inputBinding:
       position: 1
