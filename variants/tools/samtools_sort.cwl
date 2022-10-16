@@ -1,17 +1,15 @@
-
-# target command line:
-# `samtools sort <bam>`
-
 class: CommandLineTool
 cwlVersion: v1.2
 
-baseCommand: # fill in 
+baseCommand: [samtools, sort]
+stdout: sorted.bam
 
 inputs:
   alignments:
-    # fill in 
+    type: File
+    inputBinding:
+      position: 1
 
 outputs:
   sorted_bam:
-    # fill in
-
+    type: stdout

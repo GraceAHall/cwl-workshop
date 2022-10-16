@@ -2,7 +2,7 @@ class: CommandLineTool
 cwlVersion: v1.2
 
 baseCommand: [samtools, sort]
-stdout: aln.bam
+stdout: sorted.bam
 
 inputs:
   alignments:
@@ -13,4 +13,3 @@ inputs:
 outputs:
   sorted_bam:
     type: stdout
-
